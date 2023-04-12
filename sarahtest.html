@@ -1,165 +1,149 @@
 <!--  ----------------------------------------------------------------------  -->
-
 <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-
 <!--  If necessary, please modify the charset parameter to specify the        -->
-
 <!--  character set of your HTML page.                                        -->
-
 <!--  ----------------------------------------------------------------------  -->
-
-
 
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-
 <script src="https://www.google.com/recaptcha/api.js"></script>
-
 <script>
-
- function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
-
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
 </script>
 
-
-
 <!--  ----------------------------------------------------------------------  -->
-
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
-
 <!--  ----------------------------------------------------------------------  -->
-
-
 
 <form action="https://namsalightning--uatfull.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
 
-
-
 <input type=hidden name='captcha_settings' value='{"keyname":"NamsaWebCase","fallback":"true","orgId":"00D17000000tVqk","ts":""}'>
-
 <input type=hidden name="orgid" value="00D17000000tVqk">
-
 <input type=hidden name="retURL" value="http://mc4solutions.com">
 
-
-
 <!--  ----------------------------------------------------------------------  -->
-
 <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-
 <!--  these lines if you wish to test in debug mode.                          -->
-
 <!--  <input type="hidden" name="debug" value=1>                              -->
-
 <!--  <input type="hidden" name="debugEmail"                                  -->
-
 <!--  value="sarah.mcconnell@mc4solutions.com">                               -->
-
 <!--  ----------------------------------------------------------------------  -->
-
-
 
 Background Information:<textarea  id="00N1700000ibsva" name="00N1700000ibsva" type="text" wrap="soft"></textarea><br>
 
-<br>
-
-
-
 Due Date:<span class="dateInput dateOnlyInput"><input  id="00N1700000ibsvf" name="00N1700000ibsvf" size="12" type="text" /></span><br>
 
-<br>
-
 <label for="status">Status</label><select  id="status" name="status"><option value="">--None--</option><option value="On Hold">On Hold</option>
-
 <option value="In Progress">In Progress</option>
-
 <option value="Escalated">Escalated</option>
-
 <option value="Client is reviewing; awaiting response">Client is reviewing; awaiting response</option>
-
 <option value="Closed">Closed</option>
-
 <option value="New">New</option>
-
 <option value="Unassigned">Unassigned</option>
-
 <option value="Complete">Complete</option>
-
 <option value="Email Received">Email Received</option>
-
 <option value="Open">Open</option>
-
 <option value="In Approval">In Approval</option>
-
 </select><br>
-
-<br>
 
 <label for="company">Company</label><input  id="company" maxlength="80" name="company" size="20" type="text" /><br>
 
-<br>
-
 <label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
 
-<br>
-
-<br>
-
-Service Issue Type:<select  id="00N1700000ibsvl" multiple="multiple" name="00N1700000ibsvl" title="Service Issue Type"><option value="Internal communication">Internal communication</option>
-
-<option value="Client not notified of delay - testing">Client not notified of delay - testing</option>
-
-<option value="Client not notified of delay - final report">Client not notified of delay - final report</option>
-
-<option value="Test not started">Test not started</option>
-
-<option value="Error made but corrected - no impact to client">Error made but corrected - no impact to client</option>
-
-<option value="Invoice incorrect or not understood">Invoice incorrect or not understood</option>
-
-<option value="Protocol delay">Protocol delay</option>
-
-<option value="Tone / Attitude was not client friendly">Tone / Attitude was not client friendly</option>
-
-<option value="NAMSA Hard to do business with">NAMSA Hard to do business with</option>
-
-<option value="Frustration with NAMSA Connect">Frustration with NAMSA Connect</option>
-
-<option value="Did not know who to talk to">Did not know who to talk to</option>
-
-<option value="Talked to too many people">Talked to too many people</option>
-
-<option value="Price too high">Price too high</option>
-
-<option value="Inaccurate reports typographical">Inaccurate reports typographical</option>
-
-<option value="Test done incorrectly">Test done incorrectly</option>
-
-<option value="Did not provide an explanation of results">Did not provide an explanation of results</option>
-
-<option value="Issue or delay with acknowledgement, invoice or credit">Issue or delay with acknowledgement, invoice or credit</option>
-
-<option value="Item found during audit by NAMSA not client">Item found during audit by NAMSA not client</option>
-
-<option value="Item found during audit by client">Item found during audit by client</option>
-
-<option value="Not aware of additional costs/hours upfront">Not aware of additional costs/hours upfront</option>
-
-<option value="lack of interactions amongst NAMSA associates">lack of interactions amongst NAMSA associates</option>
-
-<option value="Issue with sub-contractor">Issue with sub-contractor</option>
-
+Business Unit:<select  id="00N1700000ibsvb" name="00N1700000ibsvb" title="Business Unit"><option value="">--None--</option><option value="All">All</option>
+<option value="Clinical Services">Clinical Services</option>
+<option value="Consulting Services">Consulting Services</option>
+<option value="Corporate Services">Corporate Services</option>
+<option value="IVD Services">IVD Services</option>
+<option value="Laboratory Services">Laboratory Services</option>
 </select><br>
 
-<br>
+Department:<select  id="00N1700000ibsvn" name="00N1700000ibsvn" title="Department"><option value="">--None--</option><option value="All">All</option>
+<option value="Analytical Services">Analytical Services</option>
+<option value="Animal Care">Animal Care</option>
+<option value="Biomaterial Preparation">Biomaterial Preparation</option>
+<option value="Biosafety">Biosafety</option>
+<option value="Biostatistics">Biostatistics</option>
+<option value="Clinical Study Management">Clinical Study Management</option>
+<option value="Core Lab">Core Lab</option>
+<option value="Data Management">Data Management</option>
+<option value="Engineering">Engineering</option>
+<option value="Facilities">Facilities</option>
+<option value="Finance">Finance</option>
+<option value="Histology">Histology</option>
+<option value="Human Resources">Human Resources</option>
+<option value="IACUC">IACUC</option>
+<option value="Information Technology - Applications">Information Technology - Applications</option>
+<option value="Information Technology - Compliance">Information Technology - Compliance</option>
+<option value="Information Technology - Desktop Support">Information Technology - Desktop Support</option>
+<option value="Information Technology - Infrastructure">Information Technology - Infrastructure</option>
+<option value="Information Technology - Security">Information Technology - Security</option>
+<option value="In Vitro Biocompatibility">In Vitro Biocompatibility</option>
+<option value="In Vivo Biocompatibility">In Vivo Biocompatibility</option>
+<option value="Marketing">Marketing</option>
+<option value="Medical Writing">Medical Writing</option>
+<option value="Order Processing">Order Processing</option>
+<option value="Pathology">Pathology</option>
+<option value="Preclinical">Preclinical</option>
+<option value="Product Development Strategy">Product Development Strategy</option>
+<option value="Project Management">Project Management</option>
+<option value="Purchasing">Purchasing</option>
+<option value="Quality">Quality</option>
+<option value="Quality Assurance">Quality Assurance</option>
+<option value="Quality Control">Quality Control</option>
+<option value="Regulatory">Regulatory</option>
+<option value="Reimbursement Strategy">Reimbursement Strategy</option>
+<option value="Sales">Sales</option>
+<option value="Sterility Assurance">Sterility Assurance</option>
+<option value="Study Directors">Study Directors</option>
+<option value="Validation">Validation</option>
+<option value="Veterinary Services">Veterinary Services</option>
+</select><br>
+
+Location:<select  id="00N1700000ibsvo" name="00N1700000ibsvo" title="Location"><option value="">--None--</option><option value="All">All</option>
+<option value="Beijing">Beijing</option>
+<option value="Belgium">Belgium</option>
+<option value="Irvine">Irvine</option>
+<option value="Lyon">Lyon</option>
+<option value="Minneapolis">Minneapolis</option>
+<option value="New York City">New York City</option>
+<option value="Northwood">Northwood</option>
+<option value="Obernburg">Obernburg</option>
+<option value="Selby">Selby</option>
+<option value="Shanghai">Shanghai</option>
+<option value="St. Louis Park">St. Louis Park</option>
+<option value="Madrid">Madrid</option>
+<option value="Diest">Diest</option>
+</select><br>
+
+Study / Project Number(s):<textarea  id="00N1700000ibsvm" name="00N1700000ibsvm" rows="3" type="text" wrap="soft"></textarea><br>
+
+Service Issue Type:<select  id="00N1700000ibsvl" multiple="multiple" name="00N1700000ibsvl" title="Service Issue Type"><option value="Internal communication">Internal communication</option>
+<option value="Client not notified of delay - testing">Client not notified of delay - testing</option>
+<option value="Client not notified of delay - final report">Client not notified of delay - final report</option>
+<option value="Test not started">Test not started</option>
+<option value="Error made but corrected - no impact to client">Error made but corrected - no impact to client</option>
+<option value="Invoice incorrect or not understood">Invoice incorrect or not understood</option>
+<option value="Protocol delay">Protocol delay</option>
+<option value="Tone / Attitude was not client friendly">Tone / Attitude was not client friendly</option>
+<option value="NAMSA Hard to do business with">NAMSA Hard to do business with</option>
+<option value="Frustration with NAMSA Connect">Frustration with NAMSA Connect</option>
+<option value="Did not know who to talk to">Did not know who to talk to</option>
+<option value="Talked to too many people">Talked to too many people</option>
+<option value="Price too high">Price too high</option>
+<option value="Inaccurate reports typographical">Inaccurate reports typographical</option>
+<option value="Test done incorrectly">Test done incorrectly</option>
+<option value="Did not provide an explanation of results">Did not provide an explanation of results</option>
+<option value="Issue or delay with acknowledgement, invoice or credit">Issue or delay with acknowledgement, invoice or credit</option>
+<option value="Item found during audit by NAMSA not client">Item found during audit by NAMSA not client</option>
+<option value="Item found during audit by client">Item found during audit by client</option>
+<option value="Not aware of additional costs/hours upfront">Not aware of additional costs/hours upfront</option>
+<option value="lack of interactions amongst NAMSA associates">lack of interactions amongst NAMSA associates</option>
+<option value="Issue with sub-contractor">Issue with sub-contractor</option>
+</select><br>
 
 <label for="description">Description</label><textarea name="description"></textarea><br>
 
-<br>
-
 <div class="g-recaptcha" data-sitekey="6LeSzZIUAAAAAHq4Fj3qJxwGUa6peQGH47fIg7f3"></div><br>
-
 <input type="submit" name="submit">
-
-
 
 </form>
